@@ -1,0 +1,67 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-weight: normal;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(to right, #ce7125, #00ff6c);
+}
+
+.title {
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: whitesmoke;
+    margin-top: 60px;
+}
+
+.grid {
+    font-family: 'Digital-7 Mono';
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 80vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+    margin-bottom: 50px;
+}
+
+.grid > button {
+    font-family: 'Digital-7 Mono';
+    cursor: pointer;
+    font-size: 2.2rem;
+    border: 1px solid white;
+    outline: none;
+    background-color: rgba(84, 192, 224, 0.75);
+}
+
+.grid > button:hover {
+    background-color: rgba(84, 192, 224, 0.95);
+}
+
+.span-two {
+    grid-column: span 2;
+}
+
+.output {
+    grid-column: 1 / -1;
+    background-color: rgba(0, 0, 0, 0.75);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.output .prev-op {
+    color: rgba(255, 255, 255, .75);
+    font-size: 1.5rem;
+}
+
+.output .curr-op {
+    color: white;
+    font-size: 3rem;
+}
